@@ -25,15 +25,16 @@
 2. 
 - 创建并运行 qq容器(创建并运行以后不需要执行第三步运行)
  
- `docker run --name qq -p 5900:5900 annat/qq`
+ `docker run --name qq -p 5800:5800 -p 5900:5900 -d annat/qq`
 
 - 只创建容器
 
- `docker create --name qq -p 5900:5900 annat/qq`
+ `docker create --name qq -p 5800:5800 -p 5900:5900 -d annat/qq`
 
 3. 运行
 
-       docker start qq
+- docker start qq
+- 用浏览器打开`127.0.0.1:5800`即可使用,需要使用vnc可用5900端口
 
 4. 停止
 
